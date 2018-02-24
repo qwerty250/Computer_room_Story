@@ -1,0 +1,63 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While processing the color property of anonymous style:
+  File "game/script.rpy", line 24, in script
+    hqy "欧尼酱"
+ValueError: invalid literal for int() with base 16: 'co'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 24, in script
+    hqy "欧尼酱"
+  File "I:\renpy-6.99.14.1-sdk\renpy\ast.py", line 643, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "I:\renpy-6.99.14.1-sdk\renpy\exports.py", line 1176, in say
+    who(what, *args, **kwargs)
+  File "I:\renpy-6.99.14.1-sdk\renpy\character.py", line 1013, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "I:\renpy-6.99.14.1-sdk\renpy\character.py", line 817, in do_display
+    **display_args)
+  File "I:\renpy-6.99.14.1-sdk\renpy\character.py", line 566, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "I:\renpy-6.99.14.1-sdk\renpy\ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2624, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2999, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\screen.py", line 405, in visit_all
+    self.child.visit_all(callback)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 513, in visit_all
+    callback(self)
+  File "I:\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2999, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "I:\renpy-6.99.14.1-sdk\renpy\text\text.py", line 1497, in per_interact
+    if self.style.slow_abortable:
+  File "gen/styleclass.pxi", line 733, in renpy.styledata.styleclass.Style.slow_abortable.__get__
+  File "style.pyx", line 486, in renpy.style.StyleCore._get
+  File "style.pyx", line 702, in renpy.style.build_style
+  File "style.pyx", line 699, in renpy.style.build_style
+  File "gen/style_functions.pyx", line 744, in style_functions.color_property
+  File "I:\renpy-6.99.14.1-sdk\renpy\color.py", line 137, in __new__
+    g = int(c[2]+c[3], 16)
+ValueError: invalid literal for int() with base 16: 'co'
+
+Windows-8-6.2.9200
+Ren'Py 6.99.14.1.3218
+机房绘恋 1.0
+Sat Feb 24 15:19:19 2018
